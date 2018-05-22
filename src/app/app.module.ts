@@ -2,15 +2,23 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { OneComponent } from './components/one/one.component';
+import { TwoComponent } from './components/two/two.component';
+import { UserService } from './service/user.service';
+import { FormsModule} from '@angular/forms' //as I used two way binding so i should import forms
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    OneComponent,
+    TwoComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
